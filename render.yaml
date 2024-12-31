@@ -1,0 +1,20 @@
+services:
+  # Servicio Python
+  - type: web
+    name: python-backend
+    env: python
+    region: Frankfurt (EU Central)
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python app.py"
+    workingDirectory: ./
+    healthCheckPath: "/healthz"
+
+  # Servicio Node.js
+  - type: web
+    name: node-frontend
+    env: node
+    region: Frankfurt (EU Central)
+    buildCommand: "npm install"
+    startCommand: "node servidor_rest.js"
+    workingDirectory: ./
+    healthCheckPath: "/healthz"

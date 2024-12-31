@@ -1,0 +1,24 @@
+IMPORTANTE: DESCRIPCIÓN DE LOS ARCHIVOS
+
+AngioPixe_ejecutable.zip: Contiene un ejecutable en la carpeta dist que permite ejecutar directamente el programa
+angionet.keras: Contiene entrenamiento de angionet por separado
+reestructura_detect.py: Contiene función que permite extraer groundtruth de CADICA
+yolo.py: Contiene el entrenamiento de yolo por separado
+cnn.py: Contiene el entrenamiento del modelo de CNN
+AngioNet_model.py: Contiene la arquitectura base de AngioNet (requiere estar con deeplab_model.py para funcionar)
+reestructura_classify.py: Contiene código para crear dataset a partir de selectedVideos
+svm.py: Contiene entrenamiento de SVM por separado
+segmentado_multiescala.py: Contiene funciones de algoritmo segmentación
+interfaz.py: Contiene el código de la interfaz y la integración de todos los modelos juntos
+angionet.keras: Modelo exportado de AngioNet
+svm.pkl: Modelo exportado de SVM
+modelo_cnn.h5: Modelo exportado de CNN
+config.yaml: Fichero de configuración de YOLO.
+yolo_detect.pt: Pesos del modelo yolo de detección
+yolo_classify.pt: Pesos del modelo de yolo de clasificación
+unet.py: entrenamiento y evaluación de modelo unet
+unet.keras: pesos de modelo unet
+eval_segm.py: Script para la validación cruzada de modelos de segmentación (incluye post-procesado)
+kfold_cnn.py: Script para la validación cruzada de la CNN
+kfold_yolo_classify.py: Script para la validación cruzada de yolo en tareas de clasificación.
+kfold_yolo_detect.py: Script para la validación cruzada de yolo en tareas de deteccion

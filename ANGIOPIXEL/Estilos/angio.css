@@ -1,0 +1,353 @@
+html {
+    background: aqua;
+    display: flex;
+    justify-content: center;
+    /*align-content: center;*/
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    font-size: 3vh;
+}
+h1, h2, p#nombre {
+    margin: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 3vh;
+}
+
+/* Estructura general */
+body {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 100%;
+    background: aqua;
+    justify-items: center;
+    /*align-items: end;*/
+}
+
+/* Contenido principal */
+main {
+    padding: 20px;
+    /*overflow: auto;*/ /* Asegura que el contenido no desborde */
+}
+
+/* Footer */
+footer {
+    background-color: #008293;
+    color: white;
+    font-size: 0.7em;
+    padding: 1vh 2vh;
+    text-align: center;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    box-sizing: border-box; /* Incluye el padding en el tamaño total */
+}
+
+/*access*/
+.wrapper {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    background: rgb(0 24 55 / 54%);
+    color: white;
+    padding: 3vh 8vw;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    border-radius: 12px;
+    flex-wrap: wrap;
+}
+
+.input-field {
+    padding: 1vh 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+input#user, input#pass1 {
+    width: 90%;
+}
+
+.accesibilidad{
+    border-radius: 20px;
+    background-color: #39fb9f;
+    padding: 1vh 2vh;
+}
+
+input[type="button"] {
+    border-radius: 10px;
+    padding: 0.25rem;
+    max-width: fit-content;
+    cursor: pointer;
+}
+/*medical_data*/
+.wrapper2 {
+    background: rgb(0 24 55 / 54%);
+    color: white;
+    padding: 8vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    border-radius: 12px 0;
+    flex-wrap: wrap;
+}
+/*start*/
+.wrapper3 {
+    background: rgb(0 24 55 / 54%);
+    color: white;
+    padding: 8vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    border-radius: 12px 0;
+    flex-wrap: wrap;
+}
+/*prceedings*/
+.wrapper4 {
+    display: grid;
+    gap: 1vh;
+    /* width: 780px; */
+    background: rgb(0 24 55 / 54%);
+    /* border-radius: 20px; */
+    color: bisque;
+    padding: 1vh 3vh;
+    font-size: 2.5vh;
+}
+.exp-head {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+}
+.input-box.item1 {
+    display: flex;
+    grid-column: 1;
+    grid-row: 2;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.input-box.item1 label{
+    padding: 5px 0;
+}
+.input-box.item2 {
+    display: flex;
+    gap: 1vh;
+    grid-column: 2;
+    grid-row: 2;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.input-box.item3 {
+    display: flex;
+    gap: 1vh;
+    grid-column: 3;
+    grid-row: 2;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.item1 input, .item2 input, .item3 input{
+    height: 30px;
+    padding: 5px;;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 6px;
+}
+.buttons {
+    grid-column: 1 / span 3;
+    grid-row: 3;
+}
+.input-box.item1 input:disabled, .input-box.item2 input:disabled, .input-box.item3 input:disabled {
+    cursor: default;
+    background-color: #7ed8f1;
+    border-color: rgb(5 67 87);
+    color: black;
+}
+textarea#response.response:disabled {
+    background-color: #66b8d5;
+    color: black;
+}
+
+.buttons.exp {
+    text-align: end;
+}
+/*container*/
+.container {
+    background: rgb(0 24 55 / 54%);
+    color: white;
+    padding: 8vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    border-radius: 12px 0;
+    flex-wrap: wrap;
+}
+
+div#text {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+textarea#text-chat {
+    width: 100%;
+    margin: 0.4vh 0;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+/*message*/
+table {
+    color: black;
+    background: #e4edff;
+    border-collapse: collapse;
+    border: 3px solid #3f3f3f;
+    width: 100%;
+}
+div#table-scroll {
+    overflow-y: auto;
+    max-height: 500px;
+    max-width: 100%;
+    margin: 12px 0;
+}
+tr, th {
+    /* padding-left: 10px; */
+    border-bottom: 1px solid #000;
+    text-align: left;
+    /* padding-top: 1rem; */
+    padding: 1vh;
+}
+th:hover{
+    text-decoration-line: underline;
+}
+/* Drag area*/
+.drop-area{
+    border: 5px dashed #ddd;
+    height: 40vh;
+    width: 50vw;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.drop-area.active{
+    background-color: #b8d4fe;
+    color: black;
+    border: 5px dashed #618ac9;
+}
+.drop-area{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+}
+.file-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border:solid 1px #ddd;
+}
+#preview{
+    margin-top: 10px;
+}
+.status-text{
+    padding: 0 10px;
+}
+/*----------------------------------*/
+.box-item{
+    font-size: 4rem;
+    position: relative;
+    animation-name: salto;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+.second {
+    animation-delay: 0.3s;
+}
+.third{
+    animation-delay: 0.6s;
+}
+.container2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.load{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: baseline;
+}
+.logo-dark {
+    display: none;
+}
+.logo-light {
+    /* display: flex; */
+    align-content: center;
+    /* justify-content: center; */
+    /* flex-wrap: wrap; */
+    animation-name: giro;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes giro {
+  from {transform: rotateY(1deg);}
+  to {transform: rotateY(360deg);}
+}
+@keyframes salto {
+    from {top: 0rem;}
+    to {top: -1.5rem;}
+}
+/*Cookies*/
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    display: none; /* Oculto por defecto */
+}
+
+.cookie-banner p {
+    margin: 0;
+    display: inline-block;
+}
+
+.cookie-banner a {
+    color: #00aaff;
+    text-decoration: underline;
+}
+
+.cookie-button {
+    background-color: #008293;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.cookie-button:hover {
+    background-color: #005f6b;
+}

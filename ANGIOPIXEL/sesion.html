@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--Pagina principal-->
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Adrian Bordonado Triviño, Norberto Duque Alemañ, Ignacio Guarner Sala, Aldrin
+        Benjamín Guzmán Figueroa">
+		<meta name="keywords" content="HTML5, web, angiografía, segmentación de imágenes, clasificación de imagenes">
+		<meta name="description" content="Segmentación y clasificación de angiografías online">
+		<!--Titulo-->
+		<title>Inicio - ANGIOPIXEL</title>
+		<link rel=icon href="Img/logo_b.png">
+		<!--Titulo final-->
+		<!--CSS-->
+		<link rel="stylesheet" href="Estilos/angio.css">
+		<!--CSS final-->
+		<!--Fuentes e iconos-->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+		<!--Fuentes e iconos final-->
+		
+	</head>
+<body>
+	<main>
+		<div id="subida" style="display: block;">
+			<div class="wrapper">
+				<h1>ANGIOPIXEL</h1>
+				<h2>Inicio</h2>
+				<div class="drop-area">
+					<p>Arrastra y suelta tus imágenes</p>
+					<p>o</p>
+					<button type="button">Selecciona tus archivos</button>
+					<input type="file" name="input-img" id="input-img" hidden multiple/>
+				</div>
+				<div id="preview"></div>
+				<div class="buttons">
+					<input type="button" value="Siguiente" id="btn-filtrar" onclick="filtrar()">
+					<input type="button" value="Salir" id="btn-salir" onclick="mover('index.html')">
+				</div>
+			</div>
+		</div>
+		<div id="filtrado" style="display: none;">
+			<div class="wrapper">
+				<h1>ANGIOPIXEL</h1>
+				<h2>Imágenes</h2>
+				<div class="img-box">
+					<div class="img">
+						<input type="button" value="Anterior" id="btn-izq" onclick="avance()">
+						<img src="" id="img123">
+						<input type="button" value="Siguiente" id="btn-der" onclick="avance()">
+					</div>
+				</div>
+				<h2>Filtros</h2>
+				<div class="input-box">
+					<div class="filtros">
+						<input type="checkbox" value="algoritmico.py" id="check-filtro1">
+						<label for="check-filtro1">Algorítmico</label>
+						<input type="checkbox" value="LoG.py" id="check-filtro2">
+						<label for="check-filtro2">Laplacian of Gaussian</label>
+						<input type="checkbox" value="gradiente.py" id="check-filtro3">
+						<label for="check-filtro3">Gradiente</label>
+						<input type="checkbox" value="Filtro4" id="check-filtro4">
+						<label for="check-filtro4">Filtro4</label>
+					</div>
+				</div>
+				<div class="buttons">
+					<p>Una sola imágen.</p>
+					<input type="button" value="Mostrar" id="btn-mostrar" onclick="mostrar_filtro()">
+					<input type="button" value="Revertir" id="btn-revertir-img" onclick="revertir_img()">
+				</div>
+				<div class="buttons">
+					<p>A todas las imágenes.</p>
+					<input type="button" value="Mostrar todos" id="btn-mostrar-todos" onclick="mostrar_filtro_todos()">
+					<input type="button" value="Revertir todos" id="btn-revertir-img-todos" onclick="revertir_img_todos()">
+				</div>
+				<h2>Modelos</h2>
+				<div class="input-box">
+					<div class="filtros">
+						<input type="checkbox" value="CNN.py" id="check-modelo1">
+						<label for="check-modelo1">CNN</label>
+						<input type="checkbox" value="SVM.py" id="check-modelo2">
+						<label for="check-modelo2">SVM</label>
+						<input type="checkbox" value="yolo.py" id="check-modelo3">
+						<label for="check-modelo3">YOLO</label>
+					</div>
+				</div>
+				<div class="buttons">
+					<p>Una sola imágen.</p>
+					<input type="button" value="Aplicar a uno" id="btn-aplicar" onclick="aplicar()">
+				</div>
+				<div class="buttons">
+					<p>A todas las imágenes.</p>
+					<input type="button" value="Aplicar a todos" id="btn-aplicar" onclick="aplicar_todos()">
+					<input type="button" value="Reiniciar" id="btn-aplicar" onclick="revertir_modelos()">
+				</div>
+				<h2>Resultados</h2>
+				<div id="resultadoCNN"></div>
+				<div id="resultadoSVM"></div>
+				<div id="resultadoYolo"></div>
+				<div class="buttons" id="export">
+					<p>Archivos</p>
+					<input type="button" value="Exportar" id="btn-aplicar" onclick="exportar_reg()">
+					<input type="button" value="Descargar" id="btn-aplicar" onclick="descargarImagenesComoZip()">
+				</div>
+				<div class="buttons">
+					<input type="button" value="Clasificar" id="btn-enviar" onclick="enviar()">
+					<input type="button" value="Volver" id="btn-volver" onclick="mover('sesion.html')">
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+        <p>Página creada por: Adrian Bordonado Triviño, Norberto Duque Alemañ, Ignacio Guarner Sala, Aldrin
+            Benjamín Guzmán Figueroa</p>
+        <P>Todos los derechos reservados.©AngioPixel 2024-2025</P>
+        <p><a href="accesibilidad.html" title="Pincha aqui para dirigirte a accesibidad" style="color:white"><i>&#9855;</i> Accesibilidad</a></p>
+    </footer>
+	<!--Javascript-->
+	<script src="JS/main.js"></script>
+	<script src="JS/draganddrop.js"></script>
+	<script src="JS/rest.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+	<script>tokenSesion()</script>
+	<!--Javascript fin-->
+</body>
+
+</html>
