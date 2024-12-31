@@ -22,3 +22,5 @@ eval_segm.py: Script para la validación cruzada de modelos de segmentación (in
 kfold_cnn.py: Script para la validación cruzada de la CNN
 kfold_yolo_classify.py: Script para la validación cruzada de yolo en tareas de clasificación.
 kfold_yolo_detect.py: Script para la validación cruzada de yolo en tareas de deteccion
+
+En caso de no poder descargar algún fichero, intentar descargar en https://drive.google.com/drive/folders/13oi0m4urHIL_MOwiPWPNPvyxxhsXfJq7
